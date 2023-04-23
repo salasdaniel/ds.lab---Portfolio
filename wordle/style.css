@@ -1,0 +1,120 @@
+*{
+    font-family: 'open sans', sans-serif !important;
+    box-sizing: border-box !important;
+    background-color: #202120 ;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+table{
+    border-collapse: collapse;
+    margin: 30px;
+    background-color: transparent;
+    
+}
+
+td{
+    width: 100px;
+    height: 100px;
+    border: solid #202120 4px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: #494a49;
+    font-weight: 800;
+    color:  #f7f8fc;
+}
+.input{
+    width: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+input{
+    width: 70%;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #f7f8fc;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+button{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #02907d;
+    margin: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #086054;
+    transition: ease;
+    transition-duration: 500ms;
+}
+
+svg{
+    height: 80%;
+    background-color: transparent;
+    filter: invert(95%) sepia(96%) saturate(0%) hue-rotate(233deg) brightness(106%) contrast(100%);
+}
+.titulo{
+    display: flex;
+    margin: 50px;
+}
+
+.titulo>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    width: 100px;
+    height: 100px;
+    background-color: #02907d;
+    color: white;
+    font-weight: 800;
+    font-size: 40px;
+}
+.titulo>.js{
+    background-color:#f0ce4e;
+    color: black;
+}
+p{
+font-size: 20px;
+   color: red;
+   font-weight: 600;
+   width: 500px;
+   padding: 10px;
+   text-align: center;
+   border-radius:  5px;
+   margin: 10px;
+}
+.points{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    
+}
+.points > #puntos {
+    color: white;
+    font-size: 40px;
+    
+}

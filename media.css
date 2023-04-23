@@ -1,0 +1,230 @@
+@media  (max-width:800px){
+    #nav{
+        width: 100vw;
+        font-size: 12px;
+        padding: 0 5%;
+    }
+    li{
+        padding:0 5px;
+    }
+    .inicio{
+        padding: 0 5%;
+    }
+    .inicio>h1{
+        font-size: 50px ;
+    }
+    #seccion1{
+        padding: 0;
+        width: 100vw;
+    }
+    .acerca{
+        padding: 0;
+        height: auto;
+    }
+    .acerca>h1{
+        width: 100%;
+        font-size: 25px;
+        padding: 40px 0;
+    }
+    .htecnicas{
+        display: inline-block;
+        width: 100vw;
+    }
+    .htecnicas>div{
+        width: 100%;
+        margin: 20px 0;
+    }
+    .htecnicas>div>h2{
+       padding: 15px;
+       font-size: 15px;
+    }
+    .htecnicas>div>p{
+       font-size: 12px;
+       padding: 0;
+       width: 80%;
+    }
+    .skills{
+        display: inline-block;
+        padding: 0;
+    }
+    .skills>div{
+        width: 100%;
+    }
+    .skills>div>h2{
+        padding: 15px;
+       font-size: 15px;
+    }
+    .me>p{
+        font-size: 12px;
+        padding: 0;
+        text-align: justify;
+        width: 80%;
+    }
+    .me{
+        padding: 30px 5%;
+        box-sizing: border-box;
+    }
+    .me2{
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+    }
+    .habilidades{
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+    .habilidades>div>span{
+       font-size: 20px;
+       opacity: 0.1;
+    }
+    .barra{
+        width: 100%;
+    }
+    .habilidades>h1{
+
+        font-size: 25px;
+        width: 100%;
+        padding: 40px 0;
+        text-align: center;
+        align-items: center;
+    }
+    
+    h3{
+        font-size: 12px;
+    }
+    .hblandas{
+      height: auto;
+    }
+    .hblandas>div{
+        width: 50%;
+        display: flex;
+    }
+    .hblandas>div>img{
+        width: 80px;
+    }
+    .hblandas>div>h2{
+        padding: 15px;
+        font-size: 15px;
+    }
+    .sabermas{
+        width: 100%;
+        height: auto;
+    }
+    .sabermas>h1{
+        font-size: 20px;
+        width: 100%;
+        padding: 40px 0;
+        text-align: center;
+    }
+    button{
+        background-color: #f92672;
+    }
+     #seccion2, #seccion3{
+        padding:0 5%;
+     }
+     #seccion2>h1, #seccion3>h1{
+        font-size: 25px;
+        width: 100%;
+        padding: 40px 0;
+     }
+     .portfolio{
+        display: inline-block;
+        width: 100%;
+     }
+     .portfolio>a>div{
+        padding:0;
+     }
+     .proyecto{
+        width: 100%;
+        padding: 0;
+     }
+     .backgrund, .backgrund1,.backgrund2, .backgrund3{
+        width: 90%;
+        background-image: none;
+        background-color: rgba(22, 23, 22, 0.5);
+     }
+     .portfolio>a>div>h2{
+        margin: 0;
+        padding: 20px;
+        font-size: 15px;
+        z-index: 99;
+     }
+     .portfolio>a>div>p{
+        width: 80%;
+        z-index: 99;
+        font-size: 12px;
+     }
+     .img-slider{
+        width: 100%;
+     }
+     .arrow-left{
+        left: 29%;
+        z-index: 1;
+        padding:0;
+        top: 85%;
+        border-radius: 0;
+        margin: 0;
+        background-color:#20212088;
+     }
+     .arrow-right{
+        top: 85%;
+        right: 29%;
+        z-index: 1;
+        padding:0;
+        background-color:#20212088;
+        border-radius: 0;
+
+     }
+     .arrow-left>svg{
+        width: 50%;
+
+     }
+     .arrow-right>svg{
+        width: 50%;
+     }
+     #seccion4{
+        padding: 0 5%;
+     }
+     #seccion4>h1{
+        width: 100%;
+        font-size: 25px;
+        padding: 40px 0;
+        text-align: center;
+     }
+     
+     form, input, textarea {
+        width: 100%;
+     }
+     #pie{
+        padding: 10% 20%;
+     }
+     .social{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+     }
+     .social>a{
+        width: 100%;
+        height: 49%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #272822;
+ 
+    }
+     .redes{
+        width: 40%;
+        margin: 0;
+        padding: 0;
+        
+     }
+     .redes>svg{
+        width:100%;
+        margin: 0;
+ 
+     }
+     #pie>p{
+        font-size: 10px;
+     };
+
+    }

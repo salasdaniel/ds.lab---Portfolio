@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CashFlow_Auditor/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div class="contForm">
+        <form action="" id="formCaja" onkeydown="return event.key != 'Enter';">
+            <h1>ClashFlow Auditor v.0.1.</h1>
+            <hr>  
+            <div class="etiqueta">
+                <label for="cajera">Responsable</label> 
+                <select id = "cajera" tabindex="1" required="" autocomplete="off">
+                    <option selected disabled value ="seleccionar">Seleccionar Cajera</option>
+                    <option>Liz Martinez</option>
+                    <option>Ivonne Vazquez</option>
+                    <option>Elisa Lusichi</option>
+                </select><br>
+            </div>
+
+            <div class="etiqueta">
+                <label for="fecha" >Fecha</label> 
+                <input tabindex="2" type="date" id="fecha" required ="" autocomplete="off" >
+            </div>
+
+            <div class="etiqueta">
+                <label for="turno">Turno</label>
+                <select id = "turno" tabindex="3" required ="" autocomplete="off" >
+                    <option selected disabled value ="seleccionar">Seleccionar Turno</option>
+                    <option>Día </option>
+                    <option>Noche</option>
+                </select>
+            </div>
+            <hr>   
+            <h3>Arqueo de caja</h3>
+            <hr>   
+            <div class="etiqueta">  
+                <label for="efectivo">Efectivo</label> 
+                <input tabindex="4" type="text" class = "monto" id="efectivo" onchange="sumar()" autocomplete="off" >
+            </div>
+            
+            <div class="etiqueta">
+                <label for="debito">TDD</label> 
+                <input tabindex="5" type="text" class = "monto" id="debito" onchange="sumar()" autocomplete="off" >
+            </div>
+
+            <div class="etiqueta">
+                <label for="credito">TDC</label> 
+                <input tabindex="6" type="text" class = "monto" id="credito" onchange="sumar()" autocomplete="off" >
+            </div>
+
+            <div class="etiqueta">
+                <label for="recibos">Salida efectivo</label> 
+                <input tabindex="7" type="text" class = "monto" id="recibos" onchange="sumar()" autocomplete="off" >
+            </div>
+            
+           
+            <div class="etiqueta">
+                <label for ="ventasContado">Total Ventas al contado </label>
+                <input  type="text" id="ventasContado" class = "montoR" readonly >
+                
+            </div>
+           
+                <hr>    
+            <div class="etiqueta">
+                <label for="ventasCredito">Ventas a Crédito</label> 
+                <input tabindex="8" type="text" class = "montoR" id="ventasCredito" autocomplete="off" >
+            </div>
+            <hr>
+
+            <div class="etiqueta">
+                <label for="casino">Cortesías Vivant</label> 
+                <input tabindex="9" type="text" id="casino"class = "montoC" onchange="sumarC()"autocomplete="off" >
+            </div>
+
+            <div class="etiqueta">
+                <label for="playbar">Cortesías Playbar</label> 
+                <input tabindex="10" type="text" id="playbar" class = "montoC" onchange="sumarC()"autocomplete="off" >
+            </div>
+            
+            <div class="etiqueta">
+                <label for="generales">Cortesías Generales</label> 
+                <input tabindex="11" type="text" id="generales" class = "montoC" onchange="sumarC()" autocomplete="off" >
+            </div>
+
+            <div class="etiqueta">
+                <label>Total Cortesias Emitidas </label>
+                <input type="text" id="cortesiasEmitidas" class = "montoR"  readonly>
+            </div>
+
+            <hr>
+            <div class="etiqueta">
+                <label for="cupos">Cupos de consumo</label> 
+                <input tabindex="12" type="text" class = "montoR" id="cupos" autocomplete="off" >
+            </div>
+
+            <hr>
+
+            <h3>Sistema</h3>
+
+            <hr>
+
+            <div class="etiqueta">
+                <label for="ventaSis">Ventas al Contado</label> 
+                <input tabindex="13" type="text" class = "montoR" id="ventaSis"  autocomplete="off">
+            </div>
+
+            <div class="etiqueta">
+                <label for="creditoSis">Ventas a Crédito</label> 
+                <input tabindex="14" type="text" class = "montoR" id="creditoSis"  autocomplete="off">
+            </div>
+
+            <div class="etiqueta">
+                <label for="cortesiaSis">Cortesías</label> 
+                <input tabindex="15" type="text" class = "montoR" id="cortesiaSis"  autocomplete="off">
+            </div>
+
+            <div class="etiqueta">
+                <label for="cupoSis">Cupos de Consumo</label> 
+                <input tabindex="16" type="text" class = "montoR" id="cupoSis" autocomplete="off">
+            </div>
+            <hr>
+            <div class="etiqueta">
+                <label for="obs">Observaciones</label>
+                <br>
+                <input tabindex="17" type="text" id="obs" autocomplete="off">
+            </div>
+            <hr>
+
+            <input tabindex="18" type="button" value="Ver resultado" id="btnVer" class = "btn" onclick="printResults()">
+            
+
+        </form>
+    </div>
+    <div id = "conTab" class="contRes">
+        <h1>Resultados</h1>
+        <div class="contab">
+            <table id="result" class="table">
+                
+                <tr>
+                    <th>Fecha</th>
+                    <th>Responsable</th>
+                    <th>Turno</th>
+                    <th>Ventas</th>
+                    <th>Venta a credito</th>
+                    <th>Cortesias</th>
+                    <th>Cupos</th>
+                    <th class="obs">Observaciones</th>
+                    <th class="b"></th>
+                 </tr>
+                 
+            </table>
+            
+        </div>
+        <hr>
+        <input type="button" value="Descargar Archivo" id ="btnEnviar" class = "btn" onclick="exportTableToExcel('result')" >
+        <button class = "btn" id = "end">Finalizar</button>
+    </div>
+
+    <script src="/CashFlow_Auditor/app.js"></script>
+    
+</body>
+</html>
